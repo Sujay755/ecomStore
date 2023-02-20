@@ -68,21 +68,22 @@ const Paymentb = ({products}) => {
       processThePayment(userId, token, paymentData)
       .then(response=>{
         setInfo({...info, success: response.success, loading: false})
-        console.log('PAYMENT SUCCESS');
-        console.log(response);
-        console.log(products);
-        console.log(userId);
+        // console.log('PAYMENT SUCCESS');
+        // console.log(response);
+        // console.log(products);
+        // console.log(userId);
         const orderData = {
           products: products,
           transaction_id: response.transaction.id,
-          amount: response.transaction.amount
+          amount: response.transaction.amount,
+          status: "Recieved"
         }
         createOrder(userId, token, orderData);
-        //A bug is there,please fix it
+      
         cartEmpty(()=>{
           console.log('Did we got a crash');
         })
-        // window.location.reload(true)
+        window.location.reload(true)
       })
       .catch(error=>{
         setInfo({loading: false, success: false});

@@ -5,7 +5,7 @@ export const addItemToCart = (item,next)=>{
             cart = JSON.parse(localStorage.getItem("cart"))
         }
         cart.push({
-            ...item
+            _id: item._id, price:item.price, count:1 
         })
         localStorage.setItem("cart", JSON.stringify(cart))
         next();
