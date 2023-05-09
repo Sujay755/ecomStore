@@ -28,7 +28,7 @@ const Routess = () => {
             <Route path="/admin/dashboard" element={<AdminRoute><AdminDashboard/></AdminRoute>} />
             <Route path="/admin/create/category" element={<AdminRoute><AddCategory/></AdminRoute>} />
             <Route path="/admin/categories" element={<AdminRoute><ManageCategories/></AdminRoute>} />
-            <Route path="//admin/category/update/:categoryId" element={<AdminRoute><UpdateCategory/></AdminRoute>} />
+            <Route path="/admin/category/update/:categoryId" element={<AdminRoute><UpdateCategory/></AdminRoute>} />
             <Route path="/admin/create/product" element={<AdminRoute><AddProduct/></AdminRoute>} />
             <Route path="/admin/products" element={<AdminRoute><ManageProducts/></AdminRoute>} />
             <Route path="/admin/product/update/:productId" element={<AdminRoute><UpdateProduct/></AdminRoute>} />
